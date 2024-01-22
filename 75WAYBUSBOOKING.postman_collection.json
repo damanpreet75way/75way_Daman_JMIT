@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "44559450-0402-4fd4-a97d-0965653fecd5",
+		"name": "75WAYBUSBOOKING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32484023"
+	},
+	"item": [
+		{
+			"name": "RegisterAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin7\",\n    \"password\":\"12345678\",\n    \"role\":\"ADMIN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"user3\",\n    \"password\":\"12345678\",\n    \"role\":\"USER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin5\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add bus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFlNDY4MWM1M2JkYjc2Y2MyY2I5MTkiLCJ1c2VybmFtZSI6ImFkbWluNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNTkzMDk1NSwiZXhwIjoxNzA2MDE3MzU1fQ.zkta2QRL4x8EIy5IMcEHt4EBy1_u2AOlLJRdeKa5pas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"busNumber\":\"hr06\",\n    \"totalSeats\":30,\n    \"charges\":488\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bus/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bus",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add discount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFlNDY4MWM1M2JkYjc2Y2MyY2I5MTkiLCJ1c2VybmFtZSI6ImFkbWluNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNTkzMDk1NSwiZXhwIjoxNzA2MDE3MzU1fQ.zkta2QRL4x8EIy5IMcEHt4EBy1_u2AOlLJRdeKa5pas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"discountCode\":\"DAMANPREET\",\n    \"price\":30,\n    \"charges\":488,\n    \"maxUser\":109\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/discount/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"discount",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book seat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFlNDY4MWM1M2JkYjc2Y2MyY2I5MTkiLCJ1c2VybmFtZSI6ImFkbWluNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNTkzMDk1NSwiZXhwIjoxNzA2MDE3MzU1fQ.zkta2QRL4x8EIy5IMcEHt4EBy1_u2AOlLJRdeKa5pas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"busNumber\":\"hr034\",\n    \"seatNumber\":15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bus/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bus",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"busNumber\":\"hr034\",\n    \"seatNumber\":15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bus/hr034",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bus",
+						"hr034"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
